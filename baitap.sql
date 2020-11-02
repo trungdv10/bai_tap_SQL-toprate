@@ -45,24 +45,27 @@ group by d.department_id;
 
 
 /*cau 8*/
-select e.first_name, e.last_name, e.salary
+select distinct e.first_name, e.last_name, e.salary
 from departments d join employees e 
 where e.salary > 
 		(select max(e.salary) from departments d join employees e where d.department_id=e.department_id
         and d.department_name='IT');
 
 /*cau 9*/
-select d.department_id, d.department_name, count(*) as count_employee
-from departments d join employees e 
-where d.department_id=e.department_id
-group by department_id
-order by count_employee desc;
+select d.department_id, d.department_name, count(e.employee_id) as count_employee
+from departments d inner join employees e 
+on d.department_id=e.department_id
+group by d.department_id 
+having count(e.employee_id) >= all (select count(e.employee_id) as count_employee
+								from departments d inner join employees e 
+								on d.department_id=e.department_id
+								group by d.department_id);
 
 /*cau 10*/
 select d.department_id, d.department_name, count(*) as count_employee
 from departments d join employees e 
 where d.department_id=e.department_id
-group by department_id having count_employee=0;
+group by d.department_id having count_employee=0;
 
 
 
