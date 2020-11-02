@@ -1,0 +1,10 @@
+1.Lập danh sách tên phòng ban và đếm số nhân viên của phòng ban
+2.Lập danh sách tên phòng ban và lương trung bình của nhân viên trong phòng
+3.Lập danh sách tên nhân viên và tên phòng ban mà nhân viên đó làm việc với inner join
+4.Đưa ra danh sách tên phòng ban và tên quốc gia phòng ban đang mở ở đó
+5.Lập danh sách tên các phòng ban có số nhân viên > 10
+6.Đưa ra tên các phòng ban có văn phòng mở ít nhất ở 3 quốc gia
+7.Đưa ra tên phòng ban và tên nhân viên có lương cao nhất trong phòng
+8.Đưa ra danh sách tên các nhân viên có lương lớn hơn lương của mỗi nhân viên phòng IT
+9.Liệt kê tên các phòng ban có số nhân viên nhiều nhất
+10.Liệt kê tên các phòng ban có số nhân viên bằng 0
